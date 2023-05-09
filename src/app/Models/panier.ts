@@ -1,9 +1,9 @@
 export class Panier {
-  private id: number
-  private libelle: number
-  private path: string
-  private prix: number
-  private total: number
+  id: number
+  libelle: number
+  path: string
+  prix: number
+  total: number
   constructor(
     id: number,
     libelle: number,

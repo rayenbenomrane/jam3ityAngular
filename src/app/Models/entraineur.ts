@@ -1,10 +1,10 @@
 export class Entraineur {
-  private id: number
-  private nom: string
-  private prenom: string
-  private email: string
-  private pwd: string
-  private tel: string
+  id: number
+   nom: string
+   prenom: string
+   email: string
+   pwd: string
+  tel: string
   constructor(
     id: number,
     nom: string,

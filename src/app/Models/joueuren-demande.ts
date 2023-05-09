@@ -1,11 +1,11 @@
 export class JoueurenDemande {
-  private id: number
-  private nom: string
-  private prenom: string
-  private dateDeNaissance: Date
-  private poste: string
-  private tel: string
-  private email: string
+   id: number
+   nom: string
+   prenom: string
+   dateDeNaissance: Date
+   poste: string
+   tel: string
+   email: string
   constructor(
     id: number,
     nom: string,

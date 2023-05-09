@@ -1,12 +1,12 @@
 export class JoueurenTest {
-  private id: number
-  private nom: string
-  private prenom: string
-  private dateDeNaissance: Date
-  private poste: string
-  private tel: string
-  private email: string
-  private datedetest: Date
+   id: number
+  nom: string
+   prenom: string
+ dateDeNaissance: Date
+  poste: string
+   tel: string
+  email: string
+  datedetest: Date
   constructor(
     id: number,
     nom: string,

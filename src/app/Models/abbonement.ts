@@ -1,20 +1,20 @@
 export class Abbonement {
-  private  id:number
-    private code:string
-    private qte:number
-    private libelle:string
-    private image:string
-    private prix:number
-    private details:string
+  id: number
+  code: string
+  qte: number
+  libelle: string
+  image: string
+  prix: number
+  details: string
   constructor(
     id: number,
-    code: string ,
-    qte: number ,
-    libelle: string ,
-    image: string ,
-    prix: number ,
+    code: string,
+    qte: number,
+    libelle: string,
+    image: string,
+    prix: number,
     details: string
-) {
+  ) {
     this.id = id
     this.code = code
     this.qte = qte
@@ -23,5 +23,5 @@ export class Abbonement {
     this.prix = prix
     this.details = details
   }
-  
+
 }

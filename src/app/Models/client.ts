@@ -1,10 +1,10 @@
 export class Client {
-  private id: number
-  private nom: string
-  private prenom: string
-  private tel: string
-  private email: string
-  private pwd: string
+   id: number
+   nom: string
+   prenom: string
+  tel: string
+  email: string
+   pwd: string
   constructor(
     id: number,
     nom: string,
