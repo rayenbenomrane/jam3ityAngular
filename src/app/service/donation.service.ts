@@ -11,7 +11,7 @@ export class DonationService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<Donation[]> {
-    return this.http.get<Donation[]>(`$ { this.url }`);
+    return this.http.get<Donation[]>(`${ this.url }`);
   }
 
   add(c: Donation): Observable<object> {

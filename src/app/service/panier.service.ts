@@ -11,7 +11,7 @@ export class PanierService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<Panier[]> {
-    return this.http.get<Panier[]>(`$ { this.url }`);
+    return this.http.get<Panier[]>(`${this.url}`);
   }
 
   add(c: Panier): Observable<object> {

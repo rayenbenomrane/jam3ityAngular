@@ -11,7 +11,7 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<Admin[]> {
-    return this.http.get<Admin[]>(`$ { this.url }`);
+    return this.http.get<Admin[]>(`${this.url}`);
   }
 
   add(c: Admin): Observable<object> {

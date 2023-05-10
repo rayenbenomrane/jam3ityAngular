@@ -11,7 +11,7 @@ export class JoueurenTestService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<JoueurenTest[]> {
-    return this.http.get<JoueurenTest[]>(`$ { this.url }`);
+    return this.http.get<JoueurenTest[]>(`${this.url}`);
   }
 
   add(c: JoueurenTest): Observable<object> {

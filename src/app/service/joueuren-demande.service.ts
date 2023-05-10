@@ -10,7 +10,7 @@ export class JoueurenDemandeService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<JoueurenDemande[]> {
-    return this.http.get<JoueurenDemande[]>(`$ { this.url }`);
+    return this.http.get<JoueurenDemande[]>(`${this.url}`);
   }
 
   add(c: JoueurenDemande): Observable<object> {

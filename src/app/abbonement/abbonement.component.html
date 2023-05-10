@@ -1,1 +1,80 @@
-<p>abbonement works!</p>
+
+<app-admin></app-admin>
+<div class="contenu">
+
+<table class="table">
+  <thead>
+    <tr class="table-primary">
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let item of article">
+      <td>{{ item.code }}</td>
+      <td>{{ item.libelle }}</td>
+      <td>{{ item.prix }}</td>
+      <td>{{ item.details }}</td>
+      <td>
+        <button (click)="delete(item.code)">Delete</button>
+        <button (click)="editArticle(item)">Modifier</button>
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="showPopup">
+  <div class="popup-inner">
+    <form>
+      <label for="code">Code:</label>
+      <input type="text" id="code" [(ngModel)]="newAbbonement.code">
+
+      <label for="qte">Quantity:</label>
+      <input type="number" id="qte" [(ngModel)]="newAbbonement.qte">
+
+      <label for="libelle">Libelle:</label>
+      <input type="text" id="libelle" [(ngModel)]="newAbbonement.libelle">
+
+      <label for="image">Image:</label>
+      <input type="text" id="image" [(ngModel)]="newAbbonement.image">
+
+      <label for="prix">Price:</label>
+      <input type="number" id="prix" [(ngModel)]="newAbbonement.prix">
+
+      <label for="details">Details:</label>
+      <textarea id="details" [(ngModel)]="newAbbonement.details"></textarea>
+
+      <button type="button" (click)="onSubmit()">Create</button>
+      <button type="button" (click)="showPopup=false">Cancel</button>
+    </form>
+  </div>
+</div>
+<div *ngIf="showEditPopup">
+  <div class="popup-inner">
+    <form>
+      <label for="edit-code">Code:</label>
+      <input type="text" id="edit-code" [(ngModel)]="selectedArticle.code" readonly>
+
+      <label for="edit-name">Name:</label>
+      <input type="text" id="edit-name" [(ngModel)]="selectedArticle.name">
+
+      <label for="edit-description">Description:</label>
+      <textarea id="edit-description" [(ngModel)]="selectedArticle.description"></textarea>
+
+      <label for="edit-price">Price:</label>
+      <input type="number" id="edit-price" [(ngModel)]="selectedArticle.price">
+
+      <button type="button" (click)="onSubmit1()">Update</button>
+      <button type="button" (click)="showEditPopup=false">Cancel</button>
+    </form>
+  </div>
+</div>
+<button (click)="openPopup()">Create</button>
+</div>
+

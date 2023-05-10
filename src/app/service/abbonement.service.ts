@@ -11,7 +11,7 @@ export class AbbonementService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<Abbonement[]> {
-    return this.http.get<Abbonement[]>(`$ { this.url }`);
+    return this.http.get<Abbonement[]>(`${this.url}`);
   }
 
   add(c: Abbonement): Observable<object> {

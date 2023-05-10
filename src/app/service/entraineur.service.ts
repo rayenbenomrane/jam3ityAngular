@@ -12,7 +12,7 @@ export class EntraineurService {
 
   constructor(private http: HttpClient) { }
   get(): Observable<Entraineur[]> {
-    return this.http.get<Entraineur[]>(`$ { this.url }`);
+    return this.http.get<Entraineur[]>(`${this.url}`);
   }
 
   add(c: Entraineur): Observable<object> {
