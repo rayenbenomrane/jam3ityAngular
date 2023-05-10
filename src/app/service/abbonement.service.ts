@@ -20,7 +20,7 @@ export class AbbonementService {
 
   deleteData(id: string): Observable<any> {
 
-    return this.http.delete(`${this.url} / ${id}`, { responseType: 'text' });
+    return this.http.delete(`${this.url}/${id}`, { responseType: 'text' });
   }
   update(id: number, c: Abbonement): Observable<Object> {
     return this.http.put(`${this.url} / ${id}`, c);

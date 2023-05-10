@@ -1,17 +1,18 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
-import { DashbordComponent } from './dashbord/dashbord.component';
+import { DashbordComponent } from './admin/dashbord/dashbord.component';
 import { AbbonementComponent } from './abbonement/abbonement.component';
 import { EntraineurComponent } from './entraineur/entraineur.component';
-import { JoueurComponent } from './joueur/joueur.component';
-import { JoueurEnTestComponent } from './joueur-en-test/joueur-en-test.component';
-import { JoueurEnDemandeComponent } from './joueur-en-demande/joueur-en-demande.component';
+import { JoueurComponent } from './admin/joueur/joueur.component';
+import { JoueurEnTestComponent } from './entraineur/joueur-en-test/joueur-en-test.component';
+import { JoueurEnDemandeComponent } from './entraineur/joueur-en-demande/joueur-en-demande.component';
 import { PanierComponent } from './panier/panier.component';
 import { Client } from './Models/client';
 import { ClientComponent } from './client/client.component';
-import { DonationComponent } from './donation/donation.component';
+import { DonationComponent } from './admin/donation/donation.component';
 import { LoginComponent } from './login/login.component';
+import { ListdeJoueurComponent } from './entraineur/listde-joueur/listde-joueur.component';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'joueurenDemande', component: JoueurEnDemandeComponent },
   { path: 'panier', component: PanierComponent },
   { path: 'donation', component: DonationComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'listjoueur', component: ListdeJoueurComponent },
 ];
 
 @NgModule({

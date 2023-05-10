@@ -1,9 +1,9 @@
-import { JoueurenDemandeService } from './../service/joueuren-demande.service';
-import { JoueurenTestService } from './../service/joueuren-test.service';
+import { JoueurenDemandeService } from '../../service/joueuren-demande.service';
+import { JoueurenTestService } from '../../service/joueuren-test.service';
 import { Component, OnInit } from '@angular/core';
 import { JoueurEnTestComponent } from '../joueur-en-test/joueur-en-test.component';
-import { JoueurenTest } from '../Models/joueuren-test';
-import { JoueurenDemande } from '../Models/joueuren-demande';
+import { JoueurenTest } from '../../Models/joueuren-test';
+import { JoueurenDemande } from '../../Models/joueuren-demande';
 
 @Component({
   selector: 'app-joueur-en-demande',
@@ -26,7 +26,7 @@ export class JoueurEnDemandeComponent implements OnInit {
   delete(code: string) {
 
     if (window.confirm('Are sure you want to delete ' + code + " ?")) {
-    this.JoueurenDemandeService.deleteData(code)
+      this.JoueurenDemandeService.deleteData(code)
 
         .subscribe(
           data => {

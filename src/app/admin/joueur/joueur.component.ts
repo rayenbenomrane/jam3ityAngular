@@ -1,29 +1,29 @@
-import { DonationService } from './../service/donation.service';
+import { JoueurService } from '../../service/joueur.service';
 import { Component, OnInit } from '@angular/core';
-import { Donation } from '../Models/donation';
+import { Joueurs } from '../../Models/joueurs';
 
 @Component({
-  selector: 'app-donation',
-  templateUrl: './donation.component.html',
-  styleUrls: ['./donation.component.css']
+  selector: 'app-joueur',
+  templateUrl: './joueur.component.html',
+  styleUrls: ['./joueur.component.css']
 })
-export class DonationComponent implements OnInit {
+export class JoueurComponent implements OnInit {
 
-  article: Donation[] = [];
-  constructor(private DonationService: DonationService) { }
+  article: Joueurs[] = [];
+  constructor(private JoueurService: JoueurService) { }
 
   ngOnInit(): void {
     this.getart();
   }
   getart() {
-    this.DonationService.get().subscribe(data => {
+    this.JoueurService.get().subscribe(data => {
       this.article = data;
     })
   }
   delete(code: string) {
 
     if (window.confirm('Are sure you want to delete ' + code + " ?")) {
-      this.DonationService.deleteData(code)
+      this.JoueurService.deleteData(code)
         .subscribe(
           data => {
             console.log(data);

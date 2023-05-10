@@ -1,5 +1,5 @@
-import { JoueurenTest } from '../Models/joueuren-test';
-import { JoueurenTestService } from './../service/joueuren-test.service';
+import { JoueurenTest } from '../../Models/joueuren-test';
+import { JoueurenTestService } from '../../service/joueuren-test.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
