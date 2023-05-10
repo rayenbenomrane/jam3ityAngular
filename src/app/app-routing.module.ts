@@ -11,6 +11,7 @@ import { PanierComponent } from './panier/panier.component';
 import { Client } from './Models/client';
 import { ClientComponent } from './client/client.component';
 import { DonationComponent } from './donation/donation.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'joueurenTest', component: JoueurEnTestComponent },
   { path: 'joueurenDemande', component: JoueurEnDemandeComponent },
   { path: 'panier', component: PanierComponent },
-  { path: 'donation', component: DonationComponent }
+  { path: 'donation', component: DonationComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

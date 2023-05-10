@@ -14,6 +14,7 @@ import { JoueurEnTestComponent } from './joueur-en-test/joueur-en-test.component
 import { JoueurComponent } from './joueur/joueur.component';
 import { PanierComponent } from './panier/panier.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     JoueurEnTestComponent,
     JoueurComponent,
     PanierComponent,
+    LoginComponent,
 
   ],
   imports: [
